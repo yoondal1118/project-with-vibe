@@ -39,7 +39,7 @@ function HomePage() {
       setIsReversed(reversed);
       setIsLoading(false);
       setShowResult(true);
-    }, 3000);
+    }, 2000);
   };
 
   const renderInitialView = () => (
@@ -101,7 +101,7 @@ function HomePage() {
   return (
     <div className="page-container home-page">
       <Helmet>
-        <title>오늘의 타로 | 당신의 하루를 위한 영적인 조언</title>
+        <title>카드 뽑기 | 오늘의 타로</title>
         <meta name="description" content="타로 카드를 뽑고 오늘 하루의 운세와 영적인 조언을 받아보세요. 새로운 시작, 관계, 커리어에 대한 통찰을 얻으세요." />
       </Helmet>
       {!isLoading && !showResult && renderInitialView()}

@@ -222,6 +222,50 @@ body {
   background-color: #555;
 }
 
+/* Tarot-themed Button Styles */
+.draw-button, .details-button {
+  background: linear-gradient(145deg, #7b1fa2, #4a148c);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.draw-button:hover, .details-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.details-button {
+  font-size: 0.9rem;
+  padding: 0.8rem 1.8rem;
+  margin-top: 1rem;
+}
+
+/* Spinner Animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
 
 
 
@@ -259,4 +303,20 @@ body {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.details-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  margin-top: 1rem;
+  padding: 0 1.5rem;
+}
+
+.details-panel.show {
+  max-height: 1000px; /* Adjust as needed */
+  padding: 1.5rem;
+  transition: max-height 0.5s ease-in;
 }
