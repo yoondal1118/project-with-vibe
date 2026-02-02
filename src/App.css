@@ -1,0 +1,208 @@
+/* General Body Styles & Dark Mode Theme */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #121212; /* Dark background */
+  color: #e0e0e0; /* Light grey text for readability */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  transition: background-color 0.5s ease;
+}
+
+/* App Container */
+.app-container {
+  max-width: 500px;
+  width: 100%;
+  padding: 2rem;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+  text-align: center;
+}
+
+/* Header Styles */
+.main-header {
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.sub-header {
+  font-size: 1.1rem;
+  color: #a0a0a0; /* Softer grey for subtitle */
+  margin-bottom: 3rem;
+}
+
+/* Button Styles */
+.draw-button {
+  background: linear-gradient(145deg, #7b1fa2, #4a148c); /* Purple gradient */
+  color: #ffffff;
+  border: none;
+  border-radius: 50px; /* Fully rounded */
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3rem;
+}
+
+.draw-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(123, 31, 162, 0.4);
+}
+
+.draw-button:active {
+  transform: translateY(-1px);
+}
+
+/* Loading Indicator Styles */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 300px; /* Give it some space */
+  animation: fadeIn 0.5s ease-out;
+}
+
+.loading-text {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  color: #a0a0a0;
+  margin-top: 1.5rem;
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  border-left-color: #7b1fa2;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+/* Result Card Styles */
+.result-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  animation: fadeInSlideUp 0.7s ease-out forwards;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.card-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  transition: transform 0.5s ease; /* Smooth rotation transition */
+}
+
+.card-image.reversed {
+  transform: rotate(180deg);
+}
+
+.card-name {
+  font-family: 'Lora', serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #e8e6e3; /* Creamy white */
+  margin-bottom: 0.5rem;
+}
+
+.card-orientation {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.card-meaning,
+.card-keywords {
+  color: #b0b0b0;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.card-meaning strong,
+.card-keywords strong {
+  color: #e0e0e0;
+}
+
+/* Details Section Styles */
+.details-button {
+  background-color: transparent;
+  border: 1px solid #555;
+  color: #a0a0a0;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-bottom: 1rem;
+}
+
+.details-button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.details-panel {
+  text-align: left;
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.7s ease-in-out, opacity 0.7s ease-in-out, padding 0.7s ease-in-out;
+}
+
+.details-panel.show {
+  max-height: 1000px; /* Large enough to fit content */
+  opacity: 1;
+  padding: 1.5rem;
+}
+
+.details-panel p {
+  color: #b0b0b0;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+
+/* Animation for the card */
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
