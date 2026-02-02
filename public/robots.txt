@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://project-with-vibe.pages.dev/sitemap.xml
