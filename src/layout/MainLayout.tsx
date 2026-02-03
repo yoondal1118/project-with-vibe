@@ -12,7 +12,7 @@ function MainLayout() {
         <Link to="/" className="nav-brand">오늘의 타로</Link>
         <div className="nav-links">
           <Link to="/about" className="nav-item">타로란?</Link>
-          <Link to="/cards/The-Fool" className="nav-item">카드 목록</Link> {/* 임시 링크 */}
+          <Link to="/cards" className="nav-item">카드 목록</Link>
           <Link to="/privacy" className="nav-item">개인정보처리방침</Link>
         </div>
       </nav>
@@ -23,7 +23,7 @@ function MainLayout() {
 
       <footer className="footer">
         <p>&copy; 2026 오늘의 타로. All rights reserved.</p>
-        <AdBanner adSlot={AD_SLOT_ID} />
+        {/* <AdBanner adSlot={AD_SLOT_ID} /> */}
       </footer>
     </div>
   );
