@@ -1,10 +1,7 @@
 import { Outlet, Link } from 'react-router-dom';
-import AdBanner from '../components/AdBanner';
 import '../App.css'; // 공통 스타일
 
 function MainLayout() {
-  // ★★★ 중요: 이 값을 당신의 광고 단위 ID로 교체하세요. ★★★
-  const AD_SLOT_ID = "YYYYYYYYYY"; 
 
   return (
     <div className="main-layout">
