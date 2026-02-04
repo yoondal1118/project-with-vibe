@@ -7,8 +7,8 @@ function CardsPage() {
   return (
     <div className="page-container cards-page">
       <Helmet>
-        <title>타로 카드 목록 | 오늘의 타로</title>
-        <meta name="description" content="78장의 타로 카드 전체 목록을 확인하고 각 카드의 의미와 해석을 알아보세요." />
+        <title>전체 타로 카드 목록 (78장) - 무료 타로 운세</title>
+        <meta name="description" content="78장의 전체 타로 카드 목록과 각 카드의 의미를 확인해보세요. 메이저, 마이너 아르카나 카드의 상세한 해석과 함께 오늘의 운세를 점쳐보세요." />
       </Helmet>
       
       <h1 className="page-title">타로 카드 도감</h1>

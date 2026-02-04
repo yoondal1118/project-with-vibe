@@ -101,8 +101,8 @@ function HomePage() {
   return (
     <div className="page-container home-page">
       <Helmet>
-        <title>카드 뽑기 | 오늘의 타로</title>
-        <meta name="description" content="타로 카드를 뽑고 오늘 하루의 운세와 영적인 조언을 받아보세요. 새로운 시작, 관계, 커리어에 대한 통찰을 얻으세요." />
+        <title>오늘의 타로 - 무료 타로점으로 하루 운세 보기</title>
+        <meta name="description" content="오늘의 타로 카드를 뽑아 하루의 운세를 점쳐보세요. 무료 타로점으로 오늘의 사랑운, 직업운, 금전운에 대한 조언을 얻을 수 있습니다." />
       </Helmet>
       {!isLoading && !showResult && renderInitialView()}
       {isLoading && renderLoadingView()}

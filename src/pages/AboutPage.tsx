@@ -4,8 +4,8 @@ function AboutPage() {
   return (
     <div className="page-container about-page">
       <Helmet>
-        <title>타로 카드란? | 오늘의 타로</title>
-        <meta name="description" content="타로 카드의 역사, 기원, 그리고 타로가 어떻게 개인의 성장과 통찰을 돕는지에 대해 알아보세요." />
+        <title>About 오늘의 타로 - 타로 카드의 의미와 역사</title>
+        <meta name="description" content="오늘의 타로 서비스에 대해 알아보세요. 타로 카드의 역사와 기원, 그리고 78장 카드가 어떻게 무료 운세와 자기 성찰에 사용되는지 설명합니다." />
       </Helmet>
       <h1 className="page-title">타로 카드란 무엇인가?</h1>
       <div className="page-content">

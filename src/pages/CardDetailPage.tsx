@@ -50,8 +50,8 @@ function CardDetailPage() {
   return (
     <div className="page-container card-detail-page">
       <Helmet>
-        <title>{card.name} | 타로 카드 상세 | 오늘의 타로</title>
-        <meta name="description" content={`${card.name} (${isReversed ? '역방향' : '정방향'})의 상세한 의미와 해설을 알아보세요: ${currentMeaning}`} />
+        <title>{`${card.name} 타로 카드 의미 - 오늘의 운세`}</title>
+        <meta name="description" content={`"${card.name}" 타로 카드의 정방향, 역방향 의미와 키워드, 상세 해설을 확인하세요. 무료 타로점으로 오늘의 운세를 점쳐보세요.`} />
       </Helmet>
 
       <h1 className="page-title"><span>{card.name}</span> <span className="card-orientation">{isReversed ? '역방향' : '정방향'}</span></h1>
